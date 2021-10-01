@@ -90,7 +90,6 @@ public class Main {
 
 EOT
 
-  exit
   # javac -cp ../tests:target/securibench-0.1-SNAPSHOT.jar securibench/$iname/Main.java
 
 done
