@@ -32,7 +32,7 @@ import securibench.micro.MicroTestCase;
 
 /**
  * @servlet description="values obtained from HttpServletRequest input stream"
- * @servlet vuln_count = "1"
+ * @servlet vuln_count = "0"
  */
 public class Basic36 extends BasicTestCase implements MicroTestCase {
       public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {

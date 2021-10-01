@@ -126,7 +126,7 @@ public class HttpServletRequest {
 
 	public void setCookies(Cookie[] cookies) {
 		this.cookies = cookies;
-		System.out.println("Cookie hinzugefuegt");
+		System.out.println("Cookie added");
 	}
 
 	public void setParameterMap(String value, String[] strings) {

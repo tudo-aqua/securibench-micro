@@ -41,16 +41,20 @@ import tools.aqua.concolic.Verifier;
 import $import;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Cookie;
 import java.io.IOException;
 
 public class Main {
   
   public static void main(String[] args) {
-    String s = Verifier.nondetString();
+    String s1 = Verifier.nondetString();
+    String s2 = Verifier.nondetString();
+    String s3 = Verifier.nondetString();
     HttpServletRequest req = new HttpServletRequest();
     HttpServletResponse res = new HttpServletResponse();
 
-    req.setParameter(s);
+    req.setParameter(s1);
+    req.setCookies(new Cookie[] {new Cookie(s2, s3) });
 
     $iname sut = new $iname();
     try {

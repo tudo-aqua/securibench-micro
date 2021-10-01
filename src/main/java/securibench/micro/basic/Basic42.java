@@ -30,7 +30,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="use getInitParameterNames" 
- *  @servlet vuln_count = "1" 
+ *  @servlet vuln_count = "0" 
  *  */
 public class Basic42 extends BasicTestCase implements MicroTestCase {
 

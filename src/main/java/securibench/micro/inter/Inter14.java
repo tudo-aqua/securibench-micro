@@ -33,7 +33,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="interprocedural loop" 
- *  @servlet vuln_count = "1" 
+ *  @servlet vuln_count = "0" 
  *  */
 public class Inter14 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
