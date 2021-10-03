@@ -1,4 +1,4 @@
-package javax.servlet;
+package mockx.servlet;
 
 public class ServletException extends Exception {
 }

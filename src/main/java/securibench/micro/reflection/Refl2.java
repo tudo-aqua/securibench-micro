@@ -22,11 +22,9 @@
 package securibench.micro.reflection;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.lang.reflect.Field;
 // import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import mockx.servlet.http.HttpServletRequest;
+import mockx.servlet.http.HttpServletResponse;
 import securibench.micro.BasicTestCase;
 import securibench.micro.MicroTestCase;
 

@@ -24,9 +24,9 @@ package securibench.micro.session;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import mockx.servlet.http.HttpServletRequest;
+import mockx.servlet.http.HttpServletResponse;
+import mockx.servlet.http.HttpSession;
 import securibench.micro.BasicTestCase;
 import securibench.micro.MicroTestCase;
 
