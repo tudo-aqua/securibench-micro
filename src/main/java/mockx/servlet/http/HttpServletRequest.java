@@ -4,16 +4,13 @@ import java.util.*;
 
 public class HttpServletRequest {
 
-	private Cookie[] cookies = null;
+	private Cookie cookie = null;
 	private HttpSession session = new HttpSession();
 	private String tainted = null;
 
 	public void setTaintedValue(String value) {
 		tainted = value;
-	}
-
-	public void setCookies(Cookie[] cookies) {
-		this.cookies = cookies;
+		this.cookie = new Cookie(tainted, tainted);
 	}
 
 	public String[] getParameterValues(String name) {
@@ -25,7 +22,7 @@ public class HttpServletRequest {
 	}
 
 	public Cookie[] getCookies() {
-		return cookies;
+		return new Cookie[] { cookie};
 	}
 
 	public String getHeader(String string) {
