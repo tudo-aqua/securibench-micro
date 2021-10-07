@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2006 Benjamin Livshits livshits@cs.stanford.edu
+// SPDX-License-Identifier: Apache-2.0
+
 /*
    Copyright 2006 Benjamin Livshits
 
@@ -20,6 +23,7 @@
 package securibench.micro.aliasing;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
@@ -40,11 +44,11 @@ public class Aliasing5 extends BasicTestCase implements MicroTestCase {
     }
 
     
-    void foo(StringBuffer buf, StringBuffer buf2, ServletResponse resp, ServletRequest req) throws IOException {
+    void foo(StringBuffer buf, StringBuffer buf2, HttpServletResponse resp, HttpServletRequest req) throws IOException {
     	String name = req.getParameter(FIELD_NAME);
     	buf.append(name);
     	PrintWriter writer = resp.getWriter();
-        writer.println(buf2.toString());                              /* BAD * /
+        writer.println(buf2.toString());                              /* BAD */
 	}
 	
 
