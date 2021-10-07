@@ -21,10 +21,10 @@
 package securibench.micro.basic;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import mock.sql.Connection;
+import mock.sql.DriverManager;
+import mock.sql.SQLException;
+import mock.sql.Statement;
 import java.util.Locale;
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
