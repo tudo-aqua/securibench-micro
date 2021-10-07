@@ -37,7 +37,7 @@ import securibench.micro.MicroTestCase;
 public class Datastructures5 extends BasicTestCase implements MicroTestCase {
     public class C {
     	private String str;
-    	private C next;
+    	private C next = null;
     	
     	public String getData(){return this.str;}
     	public void setData(String str){this.str = str;}
@@ -56,7 +56,7 @@ public class Datastructures5 extends BasicTestCase implements MicroTestCase {
        c1.setNext(c2);
        
        C c3 = new C();
-       c3.setData(name.toUpperCase());
+       c3.setData(name.toLowerCase()); // FH: change to be vulnerable in SVCOMP mock
        c2.setNext(c3);
        
        C c = c1;

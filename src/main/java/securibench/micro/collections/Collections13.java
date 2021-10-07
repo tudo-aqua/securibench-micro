@@ -49,9 +49,9 @@ public class Collections13 extends BasicTestCase implements MicroTestCase {
         List c4 = java.util.Arrays.asList(new String[]{new String(s1)});
         
         PrintWriter writer = resp.getWriter();  
-      	writer.println(c2.get(0));                    /* BAD */
+      	writer.println(c2.get(0));                    /* OK (FH: wrongly bad before) */
       	writer.println(c3.get(0));                    /* OK */
-      	writer.println(c4.get(0));                    /* OK */
+      	writer.println(c4.get(0));                    /* BAD (FH wrongly ok before) */
     }
     
     public String getDescription() {

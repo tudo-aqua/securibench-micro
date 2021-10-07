@@ -18,6 +18,8 @@
      @author Benjamin Livshits <livshits@cs.stanford.edu>
      
      $Id: Pred9.java,v 1.3 2006/04/04 20:00:40 livshits Exp $
+
+     // changed verdict: in SVCOMP mock this is ok
  */
 package securibench.micro.pred;
 
@@ -30,7 +32,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="using an array element as in a predicate" 
- *  @servlet vuln_count = "1" 
+ *  @servlet vuln_count = "0" 
  *  */
 public class Pred9 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
@@ -50,6 +52,6 @@ public class Pred9 extends BasicTestCase implements MicroTestCase {
     }
 
     public int getVulnerabilityCount() {
-        return 1;
+        return 0;
     }    
 }

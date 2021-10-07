@@ -30,7 +30,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description = "collection of collections" 
- *  @servlet vuln_count = "2" 
+ *  @servlet vuln_count = "1" 
  *  */
 public class Collections3 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
@@ -39,7 +39,7 @@ public class Collections3 extends BasicTestCase implements MicroTestCase {
         String s1 = req.getParameter(FIELD_NAME);
         LinkedList ll1 = new LinkedList();
         LinkedList ll2 = new LinkedList();
-        ll2.addLast(s1);
+        ll1.addLast(s1); // FH: changed to make vulnerable
         ll2.addLast(ll1);
         
         LinkedList c = (LinkedList) ll2.getLast();
@@ -48,7 +48,8 @@ public class Collections3 extends BasicTestCase implements MicroTestCase {
         PrintWriter writer = resp.getWriter();  
         writer.println(s2);                    /* BAD */
         // this is because the print out of c includes the test of s1
-        writer.println(c);                     /* BAD */     
+        // FH: in the SVCOMP mock this is not bad
+        //writer.println(c);                     /* BAD */     
     }
     
     public String getDescription() {
@@ -56,6 +57,6 @@ public class Collections3 extends BasicTestCase implements MicroTestCase {
     }
     
     public int getVulnerabilityCount() {
-        return 2;
+        return 1;
     }
 }

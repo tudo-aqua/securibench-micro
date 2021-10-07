@@ -21,9 +21,10 @@
  */
 package securibench.micro.pred;
 
+import org.sosy_lab.sv_benchmarks.Verifier;
+
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Random;
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 import securibench.micro.BasicTestCase;
@@ -37,7 +38,7 @@ public class Pred2 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        boolean choice = new Random().nextBoolean();
+        boolean choice = Verifier.nondetBoolean();
         String name = "abc";
         
         if(choice) {

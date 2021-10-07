@@ -21,8 +21,6 @@ package securibench.micro.aliasing;
 
 import java.io.IOException;
 
-//import javax.servlet.ServletRequest;
-//import javax.servlet.ServletResponse;
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 
@@ -38,17 +36,17 @@ public class Aliasing5 extends BasicTestCase implements MicroTestCase {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
        	StringBuffer buf = new StringBuffer("abc"); 
-       	//foo(buf, buf, resp, req);
+       	foo(buf, buf, resp, req);
     }
 
-    /*
+    
     void foo(StringBuffer buf, StringBuffer buf2, ServletResponse resp, ServletRequest req) throws IOException {
     	String name = req.getParameter(FIELD_NAME);
     	buf.append(name);
     	PrintWriter writer = resp.getWriter();
         writer.println(buf2.toString());                              /* BAD * /
 	}
-	*/
+	
 
 	public String getDescription() {
         return "interprocedural argument aliasing";

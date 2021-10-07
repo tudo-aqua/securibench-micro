@@ -16,6 +16,9 @@
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Aliasing2.java,v 1.1 2006/04/21 17:14:27 livshits Exp $
+
+    changed by Falk Howar: no vulnerability
+
  */
 package securibench.micro.aliasing;
 
@@ -30,7 +33,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="simple aliasing false positive" 
- *  @servlet vuln_count = "1" 
+ *  @servlet vuln_count = "0" 
  *  */
 public class Aliasing2 extends BasicTestCase implements MicroTestCase {
 	private static final String FIELD_NAME = "name";
@@ -49,6 +52,6 @@ public class Aliasing2 extends BasicTestCase implements MicroTestCase {
     }
     
     public int getVulnerabilityCount() {
-        return 1;
+        return 0;
     }
 }

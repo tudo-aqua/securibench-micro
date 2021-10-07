@@ -18,6 +18,10 @@
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: StrongUpdates4.java,v 1.2 2006/04/04 20:00:41 livshits Exp $
+
+    // FH: changed verdict, this is only vulnerable with additional assumptions
+    // about execution environment
+    
  */
 package securibench.micro.strong_updates;
 
@@ -30,7 +34,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="a more tricky test of when we can't assume a strong update with multiple variables that are not thread-local" 
- *  @servlet vuln_count = "1" 
+ *  @servlet vuln_count = "0" 
  *  */
 public class StrongUpdates4 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
@@ -55,6 +59,6 @@ public class StrongUpdates4 extends BasicTestCase implements MicroTestCase {
     }
 
     public int getVulnerabilityCount() {
-        return 1;
+        return 0;
     }    
 }

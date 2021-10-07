@@ -53,7 +53,7 @@ public class Inter11 extends BasicTestCase implements MicroTestCase {
 	}
 
 	private String foo(String s1) {
-		return s1.toUpperCase();
+		return s1.toLowerCase(); // FH: changed to make vulnerable
 	}
     
     public String getDescription() {

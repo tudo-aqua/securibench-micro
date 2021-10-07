@@ -34,7 +34,7 @@ import securibench.micro.MicroTestCase;
 public class Basic6 extends BasicTestCase implements MicroTestCase {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String s1 = req.getParameter("name");
-        String s2 = s1.toUpperCase();
+        String s2 = s1.toLowerCase(); // changed by FH to keep vuln.
         String s3 = s2.concat(";");
         String s4 = s3.replace(';', '.');
         String s5 = ":" + s4 + ":";
