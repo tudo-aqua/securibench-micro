@@ -52,7 +52,6 @@ public class Collections3 extends BasicTestCase implements MicroTestCase {
         writer.println(s2);                    /* BAD */
         // this is because the print out of c includes the test of s1
         // FH: in the SVCOMP mock this is not bad
-        //writer.println(c);                     /* BAD */     
     }
     
     public String getDescription() {

@@ -25,8 +25,8 @@
 package securibench.micro.inter;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
-//import javax.servlet.ServletResponse;
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 
@@ -35,7 +35,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="interprocedural loop" 
- *  @servlet vuln_count = "0" 
+ *  @servlet vuln_count = "1"
  *  */
 public class Inter14 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
@@ -45,18 +45,18 @@ public class Inter14 extends BasicTestCase implements MicroTestCase {
         
         for(int i = 0; i < 1500; i++){
         	if(i > 1000 && i < 1200 && (i % 7 == 3)){
-        		//f(s1, 1000, resp);
+        		f(s1, 1000, resp);
         	}
         }
     }
-    /*
-	private void f(String s1, int i, ServletResponse resp) throws IOException {
+
+	private void f(String s1, int i, HttpServletResponse resp) throws IOException {
 		if(i != 0) {
 		    PrintWriter writer = resp.getWriter();
-	        writer.println(s1);                    /* BAD * /
+	        writer.println(s1);                    /* BAD */
 		}		
 	}
-    */
+
     public String getDescription() {
         return "interprocedural loop";
     }

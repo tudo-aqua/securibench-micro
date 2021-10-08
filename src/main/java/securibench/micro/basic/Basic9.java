@@ -24,7 +24,6 @@
 package securibench.micro.basic;
 
 import org.sosy_lab.sv_benchmarks.Verifier;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import mockx.servlet.http.HttpServletRequest;

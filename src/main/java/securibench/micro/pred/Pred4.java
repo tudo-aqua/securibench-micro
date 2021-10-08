@@ -45,7 +45,7 @@ public class Pred4 extends BasicTestCase implements MicroTestCase {
         
         if(x == 3) {    // should always be taken
             PrintWriter writer = resp.getWriter();
-            writer.println(name);              /* BAD */     // nothing bad gets here
+            writer.println(name);              /* BAD */
         }
     }
 

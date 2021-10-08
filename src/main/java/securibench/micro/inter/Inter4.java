@@ -25,7 +25,7 @@
 package securibench.micro.inter;
 
 import java.io.IOException;
-//import javax.servlet.ServletResponse;
+import java.io.PrintWriter;
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 import securibench.micro.BasicTestCase;
@@ -33,7 +33,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="store stuff in a field" 
- *  @servlet vuln_count = "0" 
+ *  @servlet vuln_count = "1"
  *  */
 public class Inter4 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
@@ -41,20 +41,19 @@ public class Inter4 extends BasicTestCase implements MicroTestCase {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         name = req.getParameter(FIELD_NAME);
+        f(resp);
+    }
 
-        //f(resp);
-    }
-    /*
-    private void f(ServletResponse resp) throws IOException {
+    private void f(HttpServletResponse resp) throws IOException {
         PrintWriter writer = resp.getWriter();
-        writer.println(this.name);         /* BAD * /
+        writer.println(this.name);         /* BAD */
     }
-    */
+
     public String getDescription() {
         return "store stuff in a field";
     }
     
     public int getVulnerabilityCount() {
-        return 2;
+        return 1;
     }
 }

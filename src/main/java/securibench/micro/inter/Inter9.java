@@ -27,7 +27,6 @@ package securibench.micro.inter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Locale;
-
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 import securibench.micro.BasicTestCase;

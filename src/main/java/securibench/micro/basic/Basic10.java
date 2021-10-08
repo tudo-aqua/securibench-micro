@@ -41,7 +41,6 @@ public class Basic10 extends BasicTestCase implements MicroTestCase {
         String s3 = s2;
         String s4 = s3;
         StringBuffer b1 = new StringBuffer(s4);
-        //StringBuffer b2 = b1;
         StringBuffer b3 = b1;
         String s5 = b3.toString();
         String s6 = s5;

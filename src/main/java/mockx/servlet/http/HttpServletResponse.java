@@ -26,7 +26,7 @@ public class HttpServletResponse {
     }
 
     private void checkNoSymbolic(String s) {
-        if (s.contains("<bad/>")) {
+        if (s != null && s.contains("<bad/>")) {
             assert false;
         }
     }

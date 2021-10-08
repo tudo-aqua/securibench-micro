@@ -25,7 +25,6 @@
 package securibench.micro.pred;
 
 import org.sosy_lab.sv_benchmarks.Verifier;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import mockx.servlet.http.HttpServletRequest;
@@ -35,7 +34,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="simple correlated tests" 
- *  @servlet vuln_count = "0" 
+ *  @servlet vuln_count = "1"
  *  */
 public class Pred2 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";

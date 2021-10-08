@@ -24,10 +24,8 @@ package securibench.micro.aliasing;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
-
 import securibench.micro.BasicTestCase;
 import securibench.micro.MicroTestCase;
 

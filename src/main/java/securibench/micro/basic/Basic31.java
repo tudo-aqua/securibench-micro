@@ -36,18 +36,13 @@ import securibench.micro.MicroTestCase;
  * @servlet vuln_count = "2"
  */
 public class Basic31 extends BasicTestCase implements MicroTestCase {
-    class Data {
-        String value1;
-        String value2;
-    }
-    
+
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Cookie[] cookies = req.getCookies();
         
         String name     = cookies[0].getName();
         String value    = cookies[0].getValue();
-        //String comment  = cookies[0].getComment();
-        
+
         PrintWriter writer = resp.getWriter();
         
         if(name != null) {
@@ -56,9 +51,6 @@ public class Basic31 extends BasicTestCase implements MicroTestCase {
         if(value != null) {
             writer.println(value);                     /* BAD */
         }
-        //if(comment != null) {
-        //    writer.println(comment);                   /* BAD */
-        //}
     }
 
     public String getDescription() {

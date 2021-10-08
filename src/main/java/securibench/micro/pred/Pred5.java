@@ -43,7 +43,7 @@ public class Pred5 extends BasicTestCase implements MicroTestCase {
         
         String name = req.getParameter(FIELD_NAME);
         
-        if ( ((x > 5) && (x % 7 == 29) ) || (x == 3) ) {    // should always be taken
+        if ( ((x > 5) && (x % 7 == 29) ) || (x == 3) ) {
             PrintWriter writer = resp.getWriter();
             writer.println(name);              /* BAD */     
         }
