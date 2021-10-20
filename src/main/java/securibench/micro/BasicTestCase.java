@@ -3,7 +3,8 @@
 
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
-/**
+
+/*
    $Id: BasicTestCase.java,v 1.5 2006/04/21 17:14:24 livshits Exp $
 */
 package securibench.micro;

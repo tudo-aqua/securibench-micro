@@ -3,7 +3,8 @@
 
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Basic6.java,v 1.4 2006/04/04 20:00:40 livshits Exp $
@@ -20,7 +21,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="complex test of derived strings" 
  *  @servlet vuln_count = "1" 
- *  */
+ **/
 public class Basic6 extends BasicTestCase implements MicroTestCase {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String s1 = req.getParameter("name");

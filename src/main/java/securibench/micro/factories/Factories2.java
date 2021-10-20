@@ -4,7 +4,8 @@
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Factories2.java,v 1.3 2006/04/04 20:00:41 livshits Exp $
@@ -21,7 +22,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="simple factory problem with String.toString" 
  *  @servlet vuln_count = "1" 
- *  */
+ **/
 public class Factories2 extends BasicTestCase implements MicroTestCase {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String s1 = req.getParameter("name");

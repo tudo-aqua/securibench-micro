@@ -2,7 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // This file is part of the SV-Benchmarks collection of verification tasks:
-// https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks/**
+// https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Aliasing6.java,v 1.1 2006/04/21 17:14:27 livshits Exp $
@@ -19,7 +20,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="aliasing with copy propagation" 
  *  @servlet vuln_count = "7" 
- *  */
+ **/
 public class Aliasing6 extends BasicTestCase implements MicroTestCase {
 	private static final String FIELD_NAME = "name";
 

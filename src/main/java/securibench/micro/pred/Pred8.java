@@ -21,7 +21,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="using an array element as in a predicate" 
  *  @servlet vuln_count = "1" 
- *  */
+ **/
 public class Pred8 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
 

@@ -4,7 +4,8 @@
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Sanitizers4.java,v 1.6 2006/04/04 20:00:41 livshits Exp $
@@ -21,7 +22,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="buggy sanitizer" 
  *  @servlet vuln_count = "2" 
- *  */
+ **/
 public class Sanitizers4 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
     private PrintWriter writer;
@@ -39,7 +40,7 @@ public class Sanitizers4 extends BasicTestCase implements MicroTestCase {
     
     /** 
      * buggy javascript sanitization routine 
-     * */
+     **/
     private String clean(String name) {
         StringBuffer buf = new StringBuffer();
         for(int i = 0; i < name.length(); i++) {

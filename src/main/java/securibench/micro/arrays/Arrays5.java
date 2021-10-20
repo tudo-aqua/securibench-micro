@@ -4,7 +4,8 @@
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Arrays5.java,v 1.3 2006/04/04 20:00:40 livshits Exp $
@@ -21,7 +22,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description = "strong updates to array elements" 
  *  @servlet vuln_count = "0" 
- *  */
+ **/
 public class Arrays5 extends BasicTestCase implements MicroTestCase {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String name = req.getParameter("name");

@@ -3,7 +3,8 @@
 
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Basic19.java,v 1.7 2006/04/04 20:00:40 livshits Exp $
@@ -22,7 +23,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="simple SQL injection with prepared statements" 
  *  @servlet vuln_count = "1" 
- *  */
+ **/
 public class Basic19 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
 

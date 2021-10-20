@@ -3,7 +3,8 @@
 
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Basic10.java,v 1.5 2006/04/04 20:00:40 livshits Exp $
@@ -20,7 +21,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="chains of value assignments" 
  *  @servlet vuln_count = "1" 
- *  */
+ **/
 public class Basic10 extends BasicTestCase implements MicroTestCase {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String s1 = req.getParameter("name");

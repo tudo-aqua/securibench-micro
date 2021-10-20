@@ -4,7 +4,8 @@
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Sanitizers6.java,v 1.4 2006/04/04 20:00:41 livshits Exp $
@@ -21,7 +22,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="sanitizers for directory traversal" 
  *  @servlet vuln_count = "0" 
- *  */
+ **/
 public class Sanitizers6 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
     private PrintWriter writer;
@@ -40,7 +41,7 @@ public class Sanitizers6 extends BasicTestCase implements MicroTestCase {
      * @sanitizer 
      * sanitization routine for removing . and /\ characters from strings.
      * This routine performs white-listing by only allowing letters and digits through.  
-     * */
+     **/
     private static String clean(String name) {
         StringBuffer buf = new StringBuffer();
         for(int i = 0; i < name.length(); i++) {

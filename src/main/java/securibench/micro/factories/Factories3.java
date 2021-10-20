@@ -4,7 +4,8 @@
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Factories3.java,v 1.3 2006/04/04 20:00:41 livshits Exp $
@@ -21,7 +22,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description = "factory problem with a string wrapper" 
  *  @servlet vuln_count = "1" 
- *  */
+ **/
 public class Factories3 extends BasicTestCase implements MicroTestCase {
     class StringWrapper {
         StringWrapper(String value){

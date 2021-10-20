@@ -4,7 +4,8 @@
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Datastructures1.java,v 1.1 2006/04/21 17:14:24 livshits Exp $
@@ -23,7 +24,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="simple test of field assignment" 
  *  @servlet vuln_count = "1" 
- *  */
+ **/
 public class Datastructures1 extends BasicTestCase implements MicroTestCase {
     public class C {
     	private String str;

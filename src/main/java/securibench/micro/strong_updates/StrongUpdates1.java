@@ -6,7 +6,8 @@
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
 
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: StrongUpdates1.java,v 1.5 2006/04/04 20:00:41 livshits Exp $
@@ -23,7 +24,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="simple test of strong updates" 
  *  @servlet vuln_count = "0" 
- *  */
+ **/
 public class StrongUpdates1 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
 

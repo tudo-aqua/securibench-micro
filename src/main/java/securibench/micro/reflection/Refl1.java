@@ -23,7 +23,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="reflective call of a method" 
  *  @servlet vuln_count = "1" 
- *  */
+ **/
 public class Refl1 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
 

@@ -4,7 +4,8 @@
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
-/**
+
+/*
     @author Benjamin Livshits <livshits@cs.stanford.edu>
     
     $Id: Inter4.java,v 1.4 2006/04/04 20:00:40 livshits Exp $
@@ -21,7 +22,7 @@ import securibench.micro.MicroTestCase;
 /** 
  *  @servlet description="store stuff in a field" 
  *  @servlet vuln_count = "1"
- *  */
+ **/
 public class Inter4 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
     private String name;
