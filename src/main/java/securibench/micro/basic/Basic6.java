@@ -18,9 +18,11 @@ import mockx.servlet.http.HttpServletResponse;
 import securibench.micro.BasicTestCase;
 import securibench.micro.MicroTestCase;
 
+// FH: changed the verdict as with SVCOMP mocks this is not a vulnerability
+
 /** 
  *  @servlet description="complex test of derived strings" 
- *  @servlet vuln_count = "1" 
+ *  @servlet vuln_count = "0" 
  **/
 public class Basic6 extends BasicTestCase implements MicroTestCase {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -41,6 +43,6 @@ public class Basic6 extends BasicTestCase implements MicroTestCase {
     }
     
     public int getVulnerabilityCount() {
-        return 1;
+        return 0;
     }
 }

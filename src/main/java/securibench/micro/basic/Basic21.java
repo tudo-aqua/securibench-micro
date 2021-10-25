@@ -39,8 +39,6 @@ public class Basic21 extends BasicTestCase implements MicroTestCase {
             Statement stmt = con.createStatement();
             stmt.executeUpdate("select * from Users where name=" + name);       /* BAD */
             stmt.executeUpdate("select * from Users where name=" + name, 0);    /* BAD */
-            stmt.executeUpdate("select * from Users where name=" + name,        /* BAD */ 
-                new String[] {});     
             stmt.executeQuery("select * from Users where name=" + name);        /* BAD */
         } catch (SQLException e) {
             System.err.println("An error occurred");
