@@ -21,6 +21,10 @@ public class HttpServletResponse {
             public void println(String x) {
                 checkNoSymbolic(x);
             }
+            @Override
+            public void println(Object x) {
+                checkNoSymbolic(String.valueOf(x));
+            }
         };
     }
 
