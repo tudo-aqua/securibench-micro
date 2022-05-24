@@ -13,14 +13,14 @@ import org.sosy_lab.sv_benchmarks.Tainting;
 public class Statement {
 
     public void execute(String s) {
-        Tainting.check(s, Tainting.sql_injection, false);
+        Tainting.check(s, Tainting.sql_injection);
     }
 
     public void executeUpdate(String s, Object ... o) {
-        Tainting.check(s, Tainting.sql_injection, false);
+        Tainting.check(s, Tainting.sql_injection);
     }
 
     public void executeQuery(String s) {
-        Tainting.check(s, Tainting.sql_injection, false);
+        Tainting.check(s, Tainting.sql_injection);
     }
 }
