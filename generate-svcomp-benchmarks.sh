@@ -46,6 +46,7 @@ EOT
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
 import org.sosy_lab.sv_benchmarks.Verifier;
+import org.sosy_lab.sv_benchmarks.Tainting;
 import $import;
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
@@ -56,8 +57,13 @@ public class Main {
   
   public static void main(String[] args) {
     String s1 = Verifier.nondetString();
+
+    Tainting.taint(s1, sql_injection, false);
+    Tainting.taint(s1, xss, false);
+
     HttpServletRequest req = new HttpServletRequest();
     HttpServletResponse res = new HttpServletResponse();
+
     req.setTaintedValue(s1);
 
     $iname sut = new $iname();

@@ -6,6 +6,7 @@
 
 package mockx.servlet.http;
 
+import org.sosy_lab.sv_benchmarks.Tainting;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -34,8 +35,8 @@ public class HttpServletResponse {
   }
 
   private void checkNoSymbolic(String s) {
-    if (s != null && s.contains("<bad/>")) {
-      assert false;
+    if (s != null) {
+      Tainting.check(s, Tainting.xss, false);
     }
   }
 }

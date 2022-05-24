@@ -6,12 +6,12 @@
 
 package mock.sql;
 
+import org.sosy_lab.sv_benchmarks.Tainting;
+
 public class Connection {
 
-    public void prepareStatement(String s) throws SQLException {
-        if (s.contains("<bad/>")) {
-            assert false;
-        }
+    public void prepareStatement(String s) {
+        Tainting.check(s, Tainting.sql_injection, false);
     }
 
     public void close() throws SQLException{
