@@ -36,7 +36,7 @@ public class HttpServletResponse {
 
   private void checkNoSymbolic(String s) {
     if (s != null) {
-      Tainting.check(s, Tainting.xss);
+      Tainting.check(s, Tainting.XSS);
     }
   }
 }

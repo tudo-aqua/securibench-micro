@@ -11,7 +11,7 @@ import org.sosy_lab.sv_benchmarks.Tainting;
 public class Connection {
 
     public void prepareStatement(String s) {
-        Tainting.check(s, Tainting.sql_injection);
+        Tainting.check(s, Tainting.SQL_INJECTION);
     }
 
     public void close() throws SQLException{
