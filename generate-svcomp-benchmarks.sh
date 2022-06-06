@@ -58,8 +58,8 @@ public class Main {
   public static void main(String[] args) {
     String s1 = Verifier.nondetString();
 
-    Tainting.taint(s1, sql_injection);
-    Tainting.taint(s1, xss);
+    Tainting.taint(s1, SQL_INJECTION);
+    Tainting.taint(s1, XSS);
 
     HttpServletRequest req = new HttpServletRequest();
     HttpServletResponse res = new HttpServletResponse();
