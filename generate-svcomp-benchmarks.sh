@@ -48,7 +48,7 @@ EOT
 import org.sosy_lab.sv_benchmarks.Verifier;
 import org.sosy_lab.sv_benchmarks.Tainting;
 import $import;
-import static org.sosy_lab.sv_benchmarks.Tainting.*;
+import static tools.aqua.concolic.Tainting.*;
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 import mockx.servlet.http.Cookie;
