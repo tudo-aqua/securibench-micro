@@ -48,10 +48,14 @@ EOT
 import org.sosy_lab.sv_benchmarks.Verifier;
 import org.sosy_lab.sv_benchmarks.Tainting;
 import $import;
-import static tools.aqua.concolic.Tainting.*;
+
+import static tools.aqua.concolic.Tainting.SQL_INJECTION;
+import static tools.aqua.concolic.Tainting.XSS;
+
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 import mockx.servlet.http.Cookie;
+
 import java.io.IOException;
 
 public class Main {
