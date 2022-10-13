@@ -21,11 +21,11 @@ for f in `find src/main/java/securibench/micro | grep java`; do
   cat <<EOT >> securibench/$iname.yml
 format_version: "2.0"
 input_files:
-  - ../common/
+  - ../verifier-stub/src/main/java
   - micro/
   - $iname/
 properties:
-  - property_file: ../properties/assert.prp
+  - property_file: ../properties/taint.prp
     expected_verdict: $verdict
 
 options:
@@ -45,12 +45,12 @@ EOT
 // This file is part of the SV-Benchmarks collection of verification tasks:
 // https://gitlab.com/sosy-lab/benchmarking/sv-benchmarks
 
-import org.sosy_lab.sv_benchmarks.Verifier;
-import org.sosy_lab.sv_benchmarks.Tainting;
+import tools.aqua.concolic.Verifier;
+import tools.aqua.concolic.Tainting;
 import $import;
 
-import static org.sosy_lab.sv_benchmarks.Tainting.SQL_INJECTION;
-import static org.sosy_lab.sv_benchmarks.Tainting.XSS;
+import static tools.aqua.concolic.Tainting.SQL_INJECTION;
+import static tools.aqua.concolic.Tainting.XSS;
 
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
