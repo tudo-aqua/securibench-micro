@@ -37,7 +37,6 @@ public class Inter2Secure extends BasicTestCase implements MicroTestCase {
     }
     
     private String id(String string, PrintWriter writer) {
-        writer.println(string); /* BAD */
         
         return string;
     }
