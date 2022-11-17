@@ -21,7 +21,7 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description = "collection deposit/retrieve, check for false positives" 
- *  @servlet vuln_count = "1" 
+ *  @servlet vuln_count = "0" 
  **/
 public class Collections2 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
@@ -47,6 +47,6 @@ public class Collections2 extends BasicTestCase implements MicroTestCase {
     }
     
     public int getVulnerabilityCount() {
-        return 1;
+        return 0;
     }
 }
