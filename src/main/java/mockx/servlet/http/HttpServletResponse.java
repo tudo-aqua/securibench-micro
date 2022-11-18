@@ -25,7 +25,7 @@ public class HttpServletResponse {
 
       @Override
       public void println(Object x) {
-        checkNoSymbolic(String.valueOf(x));
+        checkNoSymbolic(x);
       }
     };
   }
@@ -34,7 +34,7 @@ public class HttpServletResponse {
     checkNoSymbolic(s);
   }
 
-  private void checkNoSymbolic(String s) {
+  private void checkNoSymbolic(Object s) {
     if (s != null) {
       Tainting.check(s, Tainting.XSS);
     }
