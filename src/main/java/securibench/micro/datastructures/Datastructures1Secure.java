@@ -31,7 +31,7 @@ public class Datastructures1Secure extends BasicTestCase implements MicroTestCas
     	private String tag = "abc";
     	
     	public String getData(){return this.str;}
-    	public String getTag(){return this.str;}
+    	public String getTag(){return this.tag;}
     	public void setData(String str){this.str = str;}
 	}
 
