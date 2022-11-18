@@ -7,8 +7,8 @@ package securibench.micro.basic;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import mockx.servlet.http.HttpServletRequest;
+import mockx.servlet.http.HttpServletResponse;
 import securibench.micro.BasicTestCase;
 import securibench.micro.MicroTestCase;
 import com.oreilly.servlet.MultipartRequest;
