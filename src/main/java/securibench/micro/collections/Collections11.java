@@ -21,7 +21,7 @@ import securibench.micro.MicroTestCase;
 public class Collections11 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String s1 = req.getParameter(FIELD_NAME);
         LinkedList c1 = new LinkedList();
         c1.addLast(s1);

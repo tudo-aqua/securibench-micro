@@ -17,7 +17,7 @@ import securibench.micro.MicroTestCase;
  *  @servlet vuln_count = "1" 
  *  */
 public class Basic41 extends BasicTestCase implements MicroTestCase {
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {        
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {        
         String s = getServletConfig().getServletContext().getInitParameter("name");
         PrintWriter writer = resp.getWriter();
         writer.println(s);           						/* BAD */

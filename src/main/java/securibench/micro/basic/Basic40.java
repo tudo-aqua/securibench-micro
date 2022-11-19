@@ -20,7 +20,7 @@ import com.oreilly.servlet.MultipartRequest;
 public class Basic40 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
       
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         // TODO: this expects multipart input 
         MultipartRequest mreq = new MultipartRequest(req, System.getenv("HOME"));
         String name = mreq.getParameter(FIELD_NAME);

@@ -21,7 +21,7 @@ import securibench.micro.MicroTestCase;
 public class Basic23 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String s = req.getParameter(FIELD_NAME);
         String name = s.toLowerCase(Locale.UK);
 

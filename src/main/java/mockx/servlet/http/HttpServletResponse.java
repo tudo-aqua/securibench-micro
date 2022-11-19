@@ -6,11 +6,12 @@
 
 package mockx.servlet.http;
 
+import mockx.servlet.ServletResponse;
 import org.sosy_lab.sv_benchmarks.Tainting;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HttpServletResponse {
+public class HttpServletResponse implements ServletResponse {
 
   public void sendRedirect(String string) throws IOException {
     checkNoSymbolic(string);

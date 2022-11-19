@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
 
-import javax.servlet.ServletResponse;
+import  mockx.servlet.ServletResponse;
 
 /** 
  *  @servlet description = "simple collection deposit/retrieve" 

@@ -20,7 +20,7 @@ import securibench.micro.MicroTestCase;
  * @servlet vuln_count = "1"
  */
 public class Basic36 extends BasicTestCase implements MicroTestCase {
-      protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+      public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         ServletInputStream in = req.getInputStream();
         BufferedReader r = new BufferedReader(new InputStreamReader(in));
         String line = r.readLine();
