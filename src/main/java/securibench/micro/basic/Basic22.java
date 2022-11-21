@@ -5,7 +5,7 @@
  */
 package securibench.micro.basic;
 
-import mock.file.File;
+import mock.io.File;
 import java.io.IOException;
 import java.util.Locale;
 import mockx.servlet.http.HttpServletRequest;

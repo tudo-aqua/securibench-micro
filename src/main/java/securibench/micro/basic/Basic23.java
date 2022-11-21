@@ -5,8 +5,8 @@
  */
 package securibench.micro.basic;
 
-import mock.file.FileInputStream;
-import mock.file.FileWriter;
+import mock.io.FileInputStream;
+import mock.io.FileWriter;
 import java.io.IOException;
 import java.util.Locale;
 import mockx.servlet.http.HttpServletRequest;

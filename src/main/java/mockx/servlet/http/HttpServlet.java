@@ -10,9 +10,23 @@ import java.io.IOException;
 
 import mockx.servlet.ServletException;
 
+import org.sosy_lab.sv_benchmarks.Tainting;
+
 public abstract class HttpServlet {
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public class Config {
+	public String getInitParameter(String name) {
+	    String tainted = Tainting.taint(name, Tainting.SECRET);
+	    return tainted;
 	}
+    }
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
+
+    public Config getServletConfig() {
+	Config config = new Config();
+	return config;
+    }
 
 }

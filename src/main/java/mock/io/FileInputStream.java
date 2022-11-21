@@ -1,4 +1,4 @@
-package mock.file;
+package mock.io;
 
 import org.sosy_lab.sv_benchmarks.Tainting;
 
