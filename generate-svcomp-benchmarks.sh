@@ -51,6 +51,7 @@ import $import;
 
 import static tools.aqua.concolic.Tainting.SQL_INJECTION;
 import static tools.aqua.concolic.Tainting.XSS;
+import static tools.aqua.concolic.Tainting.FILE_OPERATIONS;
 
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
