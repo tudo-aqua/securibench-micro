@@ -8,7 +8,7 @@ public class FileInputStream {
 
     public FileInputStream(String fileName) {
 	this.fileName = fileName;
-	Tainting.check(this.fileName, Tainting.FILE_OPRATIONS);
+	Tainting.check(this.fileName, Tainting.FILE_OPERATIONS);
     }
 
 
