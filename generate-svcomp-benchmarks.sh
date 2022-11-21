@@ -65,6 +65,7 @@ public class Main {
 
     Tainting.taint(s1, SQL_INJECTION);
     Tainting.taint(s1, XSS);
+    Tainting.taint(s1, FILE_OPERATIONS);
 
     HttpServletRequest req = new HttpServletRequest();
     HttpServletResponse res = new HttpServletResponse();
