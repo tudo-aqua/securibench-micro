@@ -11,27 +11,21 @@ import java.io.IOException;
 import java.util.*;
 
 import mockx.servlet.ServletException;
+import mockx.servlet.ServletContext;
 
 import org.sosy_lab.sv_benchmarks.Tainting;
 import org.sosy_lab.sv_benchmarks.Verifier;
 
 public abstract class HttpServlet {
 
-    public class Context {
-	public String getInitParameter(String parameter) {
-	    parameter = Tainting.taint(parameter, Tainting.INTERNAL_INFO);
-	    return parameter;
-	}
-    }
-    
     public class Config {
 	public String getInitParameter(String parameter) {
 	    parameter = Tainting.taint(parameter, Tainting.INTERNAL_INFO);
 	    return parameter;
 	}
 
-	public Context getServletContext() {
-	    Context context = new Context();
+	public ServletContext getServletContext() {
+	    ServletContext context = new ServletContext();
 	    return context;
 	}
 
