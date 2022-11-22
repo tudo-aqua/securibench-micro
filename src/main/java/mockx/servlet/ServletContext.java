@@ -1,3 +1,5 @@
+package mockx.servlet;
+
 import org.sosy_lab.sv_benchmarks.Tainting;
 
 public class ServletContext {
