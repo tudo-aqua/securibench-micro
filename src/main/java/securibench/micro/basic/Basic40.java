@@ -11,7 +11,7 @@ import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 import securibench.micro.BasicTestCase;
 import securibench.micro.MicroTestCase;
-import com.oreilly.servlet.MultipartRequest;
+import mockx.servlet.MultipartRequest;
 
 /**
  * @servlet description="MultipartRequest test"
