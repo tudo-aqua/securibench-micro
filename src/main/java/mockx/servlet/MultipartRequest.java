@@ -10,7 +10,7 @@ public class MultipartRequest {
 	this.inner = req;
     }
 
-    public getParameter(String fieldname) {
+    public String getParameter(String fieldname) {
 	return this.inner.getParameter(fieldname);
     }
 }
