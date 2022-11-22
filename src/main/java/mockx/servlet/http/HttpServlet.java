@@ -8,16 +8,31 @@ package mockx.servlet.http;
 
 import java.io.IOException;
 
+import java.util.*;
+
 import mockx.servlet.ServletException;
 
 import org.sosy_lab.sv_benchmarks.Tainting;
+import org.sosy_lab.sv_benchmarks.Verifier;
 
 public abstract class HttpServlet {
 
     public class Config {
-	String getInitParameter(String parameter) {
+	public String getInitParameter(String parameter) {
 	    parameter = Tainting.taint(parameter, Tainting.INTERNAL_INFO);
 	    return parameter;
+	}
+
+	public Enumeration getInitParameterNames() {
+	    String a = Tainting.taint(Verifier.nondetString(), Tainting.INTERNAL_INFO);
+	    String b = Tainting.taint(Verifier.nondetString(), Tainting.INTERNAL_INFO);
+	    String c = Tainting.taint(Verifier.nondetString(), Tainting.INTERNAL_INFO);
+	    List arrayList = new ArrayList();
+	    arrayList.add(a);
+	    arrayList.add(b);
+	    arrayList.add(c);
+	    Enumeration e = Collections.enumeration(arrayList);
+	    return e;
 	}
     }
 
