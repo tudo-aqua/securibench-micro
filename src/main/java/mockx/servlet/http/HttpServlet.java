@@ -14,7 +14,19 @@ import org.sosy_lab.sv_benchmarks.Tainting;
 
 public abstract class HttpServlet {
 
+    public class Config {
+	String getInitParameter(String parameter) {
+	    parameter = Tainting.taint(parameter, Tainting.INTERNAL_INFO);
+	    return parameter;
+	}
+    }
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
+
+    public Config getServletConfig() {
+	Config config = new Config();
+	return config;
     }
 
 }
