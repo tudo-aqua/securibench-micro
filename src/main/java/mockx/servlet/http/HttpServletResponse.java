@@ -37,8 +37,8 @@ public class HttpServletResponse implements ServletResponse {
 
   private void checkNoSymbolic(Object s) {
     if (s != null) {
-      Tainting.check(s, Tainting.XSS);
-      Tainting.check(s, Tainting.INTERNAL_INFO);
+	//Tainting.check(s, Tainting.XSS);
+	Tainting.check(s, Tainting.INTERNAL_INFO);
     }
   }
 }
