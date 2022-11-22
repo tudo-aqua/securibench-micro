@@ -17,10 +17,22 @@ import org.sosy_lab.sv_benchmarks.Verifier;
 
 public abstract class HttpServlet {
 
+    public class Context {
+	public String getInitParameter(String parameter) {
+	    parameter = Tainting.taint(parameter, Tainting.INTERNAL_INFO);
+	    return parameter;
+	}
+    }
+    
     public class Config {
 	public String getInitParameter(String parameter) {
 	    parameter = Tainting.taint(parameter, Tainting.INTERNAL_INFO);
 	    return parameter;
+	}
+
+	public Context getServletContext() {
+	    Context context = new Context();
+	    return context;
 	}
 
 	public Enumeration getInitParameterNames() {
