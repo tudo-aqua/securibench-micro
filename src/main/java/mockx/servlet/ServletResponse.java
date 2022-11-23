@@ -7,6 +7,7 @@
 package mockx.servlet;
 
 import java.io.PrintWriter;
+import java.io.IOException;
 
 public interface ServletResponse {
     public PrintWriter getWriter() throws IOException;
