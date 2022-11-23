@@ -6,10 +6,13 @@
 package securibench.micro.collections;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedList;
+import java.util.Collection;
 
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
+import  mockx.servlet.ServletResponse;
 
 import securibench.micro.BasicTestCase;
 import securibench.micro.MicroTestCase;
@@ -19,6 +22,17 @@ import securibench.micro.MicroTestCase;
  *  @servlet vuln_count = "1" 
  *  */
 public class Collections11 extends BasicTestCase implements MicroTestCase {
+
+    class Collections11b {
+	protected void foo(Object o, ServletResponse resp) throws IOException {
+	    Collection c = (Collection) o;
+	    String str = c.toString();
+	    PrintWriter writer = resp.getWriter();  
+	    writer.println(str);                    /* BAD */
+	}
+    }
+
+
     private static final String FIELD_NAME = "name";
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
