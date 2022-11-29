@@ -7,6 +7,8 @@
 package mockx.servlet.http;
 
 import java.util.*;
+import mockx.servlet.ServletInputStream;
+
 
 public class HttpServletRequest {
 
@@ -81,4 +83,7 @@ public class HttpServletRequest {
 		return tainted;
 	}
 
+        public String getInputStream() {
+	    return new ServletInputStream(tainted);
+	}
 }

@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import javax.servlet.ServletInputStream;
+import mockx.servlet.ServletInputStream;
 import mockx.servlet.http.HttpServletRequest;
 import mockx.servlet.http.HttpServletResponse;
 import securibench.micro.BasicTestCase;
