@@ -83,7 +83,7 @@ public class HttpServletRequest {
 		return tainted;
 	}
 
-        public String getInputStream() {
+        public ServletInputStream getInputStream() {
 	    return new ServletInputStream(tainted);
 	}
 }
