@@ -3,7 +3,7 @@ package mockx.servlet;
 import java.io.InputStream;
 
 public class ServletInputStream {
-    private bytes[] string;
+    private byte[] string;
     private int position;
     private int mark;
     
