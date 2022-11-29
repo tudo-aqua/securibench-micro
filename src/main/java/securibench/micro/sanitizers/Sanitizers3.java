@@ -22,7 +22,9 @@ import securibench.micro.MicroTestCase;
 
 /** 
  *  @servlet description="safe redirect" 
- *  @servlet vuln_count = "0" 
+ *  @servlet vuln_count = "1"
+ *
+ *  Original verdict was safe. 
  **/
 public class Sanitizers3 extends BasicTestCase implements MicroTestCase {
     private static final String FIELD_NAME = "name";
@@ -31,7 +33,7 @@ public class Sanitizers3 extends BasicTestCase implements MicroTestCase {
         String s = req.getParameter(FIELD_NAME);
         String name = s.toLowerCase(Locale.UK);
 
-       resp.sendRedirect(URLEncoder.encode("/user/" + name, "UTF-8"));		/* OK */
+       resp.sendRedirect(URLEncoder.encode("/user/" + name, "UTF-8"));		/* Originally OK, we think it is BAD */
     }
     
     public String getDescription() {
@@ -39,6 +41,6 @@ public class Sanitizers3 extends BasicTestCase implements MicroTestCase {
     }
     
     public int getVulnerabilityCount() {
-        return 0;
+        return 1;
     }
 }
