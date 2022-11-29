@@ -2,7 +2,7 @@ package mockx.servlet;
 
 import java.io.InputStream;
 
-public class ServletInputStream {
+public class ServletInputStream extends InputStream {
     private byte[] string;
     private int position;
     private int mark;
