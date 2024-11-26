@@ -20,7 +20,7 @@ public abstract class HttpServlet {
 
     public class Config {
 	public String getInitParameter(String parameter) {
-	    parameter = Tainting.taint(parameter, Tainting.INTERNAL_INFO);
+	    parameter = Tainting.taint(Verifier.nondetString(), Tainting.INTERNAL_INFO);
 	    return parameter;
 	}
 
